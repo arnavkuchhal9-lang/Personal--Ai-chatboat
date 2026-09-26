@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arnav AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- MARKDOWN -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- SECURITY -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+
+    <!-- MATHJAX -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            }
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    A
+                </div>
+
+                <div>
+
+                    <h2>Arnav AI</h2>
+
+                    <span>
+                        Personal Assistant
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button class="new-chat">
+
+                <span>＋</span>
+
+                New Chat
+
+            </button>
+
+
+            <div class="sidebar-section">
+
+                <p>PERSONAL</p>
+
+                <div class="menu-item active">
+
+                    <span>💬</span>
+
+                    Chat
+
+                </div>
+
+
+                <div class="menu-item">
+
+                    <span>🧠</span>
+
+                    My Memory
+
+                </div>
+
+
+                <div class="menu-item">
+
+                    <span>👤</span>
+
+                    About Arnav
+
+                </div>
+
+            </div>
+
+
+            <div class="chat-history-sidebar">
+
+                <p>CHATS</p>
+
+                <div id="chatList"></div>
+
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="status">
+
+                    <span class="status-dot"></span>
+
+                    AI Online
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <main class="chat-area">
+
+            <header class="chat-header">
+
+                <div class="bot-info">
+
+                    <div class="bot-avatar">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Arnav's Personal AI
+                        </h3>
+
+                        <span>
+                            Ask me anything about Arnav
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button class="header-button">
+                    ⋮
+                </button>
+
+            </header>
+
+
+            <section class="messages">
+
+                <div class="welcome">
+
+                    <div class="welcome-icon">
+                        ✦
+                    </div>
+
+                    <h1>
+                        Hey! I'm Arnav's AI 👋
+                    </h1>
+
+                    <p>
+                        Ask me anything about Arnav, his interests,
+                        skills, hobbies, preferences and more.
+                    </p>
+
+                </div>
+
+
+                <div class="message bot-message">
+
+                    <div class="avatar">
+                        🤖
+                    </div>
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            Arnav AI
+                        </div>
+
+                        <div class="bubble">
+
+                            Hi! I'm ready to answer questions about Arnav.
+                            What would you like to know?
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="suggestions">
+
+                    <button>
+                        🏏 Favourite sport?
+                    </button>
+
+                    <button>
+                        💻 What does Arnav study?
+                    </button>
+
+                    <button>
+                        🎮 What are his hobbies?
+                    </button>
+
+                    <button>
+                        🎯 What is his goal?
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <footer class="input-area">
+
+                <div class="input-box">
+
+                    <button class="attach">
+                        ＋
+                    </button>
+
+                    <input
+                        type="text"
+                        placeholder="Ask something about Arnav..."
+                        id="messageInput"
+                    >
+
+                    <button
+                        class="send-button"
+                        id="sendButton"
+                    >
+                        ➤
+                    </button>
+
+                </div>
+
+
+                <p class="input-note">
+
+                    Arnav AI can answer questions based on stored
+                    personal information.
+
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- YOUR JAVASCRIPT -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
