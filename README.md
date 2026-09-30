@@ -223,6 +223,9 @@ Some possible improvements include:
 * ⚡ Streaming AI responses
 
 ---
+## UI
+<img width="1867" height="997" alt="image" src="https://github.com/user-attachments/assets/863defb0-9bb9-4a1d-8207-295dd2e3b6df" />
+
 
 ## 🔒 Security
 
